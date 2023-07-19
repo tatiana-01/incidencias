@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj": {}
+    "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj": {
+    "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj",
+        "projectUniqueName": "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Tatiana Paredes C\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\obj\\",
+        "projectPath": "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj",
+        "packagesPath": "/home/apolm01-033/.nuget/packages/",
+        "outputPath": "/home/apolm01-033/Desktop/incidencias/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tatiana Paredes C\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/apolm01-033/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
         }
       }
     }

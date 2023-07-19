@@ -3,6 +3,7 @@ using System;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(IncidenciasContext))]
-    partial class IncidenciasContextModelSnapshot : ModelSnapshot
+    [Migration("20230719114254_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,9 +96,6 @@ namespace Infrastructure.Data.Migrations
                     b.HasKey("idTrainer", "idEmail");
 
                     b.HasIndex("idEmail");
-
-                    b.HasIndex("trainerEmail")
-                        .IsUnique();
 
                     b.ToTable("EmailsTrainers", (string)null);
                 });

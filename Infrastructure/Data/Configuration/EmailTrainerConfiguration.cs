@@ -26,6 +26,8 @@ public class EmailTrainerConfiguration : IEntityTypeConfiguration<EmailTrainer>
             .HasMaxLength(50)
             .IsRequired();
 
+            builder.HasIndex(p => p.trainerEmail)
+            .IsUnique();
             
     }
 }

@@ -14,9 +14,24 @@ public class IncidenciasContext : DbContext
     {
     }
     public DbSet<Area> ? Areas {get; set;}
-    //public DbSet<Trainer> ? Trainers {get; set;}
+    public DbSet<Categoria> ? Categorias {get; set;}
+    public DbSet<Email> ? Emails {get; set;}
+    public DbSet<EmailTrainer> ? EmailTrainers {get; set;}
+    public DbSet<Hardware> ? Hardwares {get; set;}
+    public DbSet<Incidencia> ? Incidencias {get; set;}
+    public DbSet<Puesto> ? Puestos {get; set;}
+    public DbSet<Salon> ? Salones {get; set;}
+    public DbSet<Software> ? Softwares {get; set;}
+    public DbSet<Telefono> ? Telefonos {get; set;}
+    public DbSet<TelefonoTrainer> ? TelefonosTrainers {get; set;}
+    public DbSet<TipoHardware> ? TiposHardwares {get; set;}
+    public DbSet<TipoIncidencia> ? TiposIncidencias {get; set;}
+    public DbSet<TipoSoftware> ? TiposSoftwares {get; set;}
+    public DbSet<Trainer> ? Trainers {get; set;}
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<EmailTrainer>().HasKey(p=> new {p.idTrainer, p.idEmail});
+        modelBuilder.Entity<TelefonoTrainer>().HasKey(p=> new {p.idTrainer, p.idTelefono});
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }

@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/apolm01-033/.nuget/packages/": {}
+    "C:\\Users\\Tatiana Paredes C\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj",
+      "projectUniqueName": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "/home/apolm01-033/Desktop/incidencias/Core/Core.csproj",
-      "packagesPath": "/home/apolm01-033/.nuget/packages/",
-      "outputPath": "/home/apolm01-033/Desktop/incidencias/Core/obj/",
+      "projectPath": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\Tatiana Paredes C\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tatiana Paredes C\\Desktop\\campus\\incidencias\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/apolm01-033/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Tatiana Paredes C\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.109/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

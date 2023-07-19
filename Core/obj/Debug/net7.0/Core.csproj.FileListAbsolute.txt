@@ -1,0 +1,12 @@
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\bin\Debug\net7.0\Core.deps.json
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\bin\Debug\net7.0\Core.dll
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\bin\Debug\net7.0\Core.pdb
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.dll
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\Core.pdb
+C:\Users\Tatiana Paredes C\Desktop\campus\incidencias\Core\obj\Debug\net7.0\ref\Core.dll

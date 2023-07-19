@@ -1,11 +1,14 @@
+using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.ConfigureCors();
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddAplicationServices();
 builder.Services.AddDbContext<IncidenciasContext>(optionsBuilder =>
 {
     string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -15,6 +18,8 @@ builder.Services.AddDbContext<IncidenciasContext>(optionsBuilder =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 
 var app = builder.Build();
 
@@ -39,6 +44,8 @@ using (var scope = app.Services.CreateScope())
         logger.LogError(ex, "Ocurrió un error durante la migración");
     }
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

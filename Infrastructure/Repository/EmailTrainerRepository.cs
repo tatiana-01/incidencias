@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository;
 
@@ -18,43 +19,41 @@ public class EmailTrainerRepository : IEmailTrainer
     }
     public void Add(EmailTrainer entity)
     {
-        _context.Set<Email>().Add(entity);
+        _context.Set<EmailTrainer>().Add(entity);
     }
 
     public void AddRange(IEnumerable<EmailTrainer> entities)
     {
-        _context.Set<Email>().AddRange(entities);
+        _context.Set<EmailTrainer>().AddRange(entities);
     }
 
     public IEnumerable<EmailTrainer> Find(Expression<Func<EmailTrainer, bool>> expression)
     {
-        return _context.Set<Email>().Where(expression);
+        return _context.Set<EmailTrainer>().Where(expression);
     }
 
-    public Task<IEnumerable<EmailTrainer>>? GetAllAsync()
+    public async Task<IEnumerable<EmailTrainer>>? GetAllAsync()
     {
-        return await _context.Set<Email>().ToListAsync();
+        return await _context.Set<EmailTrainer>().ToListAsync();
     }
 
-    public Task<EmailTrainer>? GetByIdAsync(int id)
+    public async Task<EmailTrainer>? GetByIdAsync(int id)
     {
-        return await _context.Emails
-        .Include(p=>p.emailsTrainers)
-        .FirstOrDefaultAsync(p=>p.id == id);
+        return await _context.Set<EmailTrainer>().FindAsync(id);
     }
 
     public void Remove(EmailTrainer entity)
     {
-        _context.Set<Email>().Remove(entity);
+        _context.Set<EmailTrainer>().Remove(entity);
     }
 
     public void RemoveRange(IEnumerable<EmailTrainer> entities)
     {
-        _context.Set<Email>().RemoveRange(entities);
+        _context.Set<EmailTrainer>().RemoveRange(entities);
     }
 
     public void Update(EmailTrainer entity)
     {
-        _context.Set<Email>().Update(entity);
+        _context.Set<EmailTrainer>().Update(entity);
     }
 }

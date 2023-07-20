@@ -10,7 +10,7 @@ namespace Core.Interfaces;
     public interface ISalon
     {
         Task<Salon> ? GetByIdAsync(int id);
-        Task<IEnumerable<Salon>> ? GetAllSync();
+        Task<IEnumerable<Salon>> ? GetAllAsync();
         IEnumerable<Salon> Find(Expression<Func<Salon,bool>> expression);
         void Add(Salon entity);
         void AddRange(IEnumerable<Salon> entities);

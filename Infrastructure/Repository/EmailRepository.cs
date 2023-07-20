@@ -10,11 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository;
 
-    public class EmailRepository : IEmail
-    {
+public class EmailRepository : IEmail
+{
     private readonly IncidenciasContext _context;
 
-    public EmailRepository(IncidenciasContext context){
+    public EmailRepository(IncidenciasContext context)
+    {
         _context = context;
     }
     public void Add(Email entity)
@@ -40,8 +41,8 @@ namespace Infrastructure.Repository;
     public async Task<Email>? GetByIdAsync(int id)
     {
         return await _context.Emails
-        .Include(p=>p.emailsTrainers)
-        .FirstOrDefaultAsync(p=>p.id == id);
+        .Include(p => p.emailsTrainers)
+        .FirstOrDefaultAsync(p => p.id == id);
     }
 
     public void Remove(Email entity)
@@ -58,4 +59,4 @@ namespace Infrastructure.Repository;
     {
         _context.Set<Email>().Update(entity);
     }
-    }
+}

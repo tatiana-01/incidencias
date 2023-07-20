@@ -7,20 +7,20 @@ namespace Core.Interfaces;
 
     public interface IUnitOfWork
     {
-        IArea Areas {get; set;}
-        ICategoria Categorias {get; set;}
-        IEmail Emails {get; set;}
-        IEmailTrainer EmailsTrainers {get; set;}
-        IHardware Hardwares {get; set;}
-        IIncidencia Incidencias {get; set;}
-        IPuesto Puestos {get; set;}
-        ISalon Salones {get; set;}
-        ISoftware Softwares {get; set;}
-        ITelefono Telefonos {get; set;}
-        ITelefonoTrainer TelefonosTrainers {get; set;}
-        ITipoHardware TiposHardwares {get;set;}
-        ItipoIncidencia TiposIncidencias {get; set;}
-        ITipoSoftware TiposSoftwares {get; set;}
-        ITrainer Trainers {get; set;}
-        Task<int> saveAsync();
+        IArea Areas {get; }
+        ICategoria Categorias {get; }
+        IEmail Emails {get; }
+        IEmailTrainer EmailsTrainers {get; }
+        IHardware Hardwares {get; }
+        IIncidencia Incidencias {get; }
+        IPuesto Puestos {get; }
+        ISalon Salones {get; }
+        ISoftware Softwares {get; }
+        ITelefono Telefonos {get; }
+        ITelefonoTrainer TelefonosTrainers {get; }
+        ITipoHardware TiposHardwares {get;}
+        ItipoIncidencia TiposIncidencias {get; }
+        ITipoSoftware TiposSoftwares {get; }
+        ITrainer Trainers {get; }
+        Task<int> SaveAsync();
     }

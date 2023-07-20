@@ -16,7 +16,7 @@ public class IncidenciasContext : DbContext
     public DbSet<Area> ? Areas {get; set;}
     public DbSet<Categoria> ? Categorias {get; set;}
     public DbSet<Email> ? Emails {get; set;}
-    public DbSet<EmailTrainer> ? EmailTrainers {get; set;}
+    public DbSet<EmailTrainer> ? EmailsTrainers {get; set;}
     public DbSet<Hardware> ? Hardwares {get; set;}
     public DbSet<Incidencia> ? Incidencias {get; set;}
     public DbSet<Puesto> ? Puestos {get; set;}

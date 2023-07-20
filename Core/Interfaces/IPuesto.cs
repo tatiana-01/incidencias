@@ -9,7 +9,7 @@ namespace Core.Interfaces;
 
     public interface IPuesto
     {
-        Task<Puesto> ? GetByIAsync(int id);
+        Task<Puesto> ? GetByIdAsync(int id);
         Task<IEnumerable<Puesto>> ? GetAllAsync();
         IEnumerable<Puesto> Find(Expression<Func<Puesto,bool>> expression);
         void Add(Puesto entity);

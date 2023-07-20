@@ -9,9 +9,9 @@ namespace Core.Interfaces;
 
     public interface IIncidencia
     {
-        Task<int> ? GetByIdAsync(int id);
+        Task<Incidencia> ? GetByIdAsync(int id);
         Task<IEnumerable<Incidencia>> ? GetAllAsync();
-        IEnumerable<Incidencia> Find(Expression<Func<Hardware,bool>> expression);
+        IEnumerable<Incidencia> Find(Expression<Func<Incidencia,bool>> expression);
         void Add (Incidencia entity);
         void AddRange(IEnumerable<Incidencia> entities);
         void Remove(Incidencia entity);

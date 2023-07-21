@@ -59,9 +59,10 @@ public class EmailController : BaseApiController
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<EmailsDTO>> Put(int id, [FromBody] EmailsDTO emailEdicion)
+    public async Task<ActionResult<EmailsDTO>> Put(int id, [FromBody] EmailPostDTO emailEdicion)
     {
         var email = mapper.Map<Email>(emailEdicion);
+        email.id = id;
         if (email == null)
         {
             return NotFound();

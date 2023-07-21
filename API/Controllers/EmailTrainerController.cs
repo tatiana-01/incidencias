@@ -40,6 +40,18 @@ public class EmailTrainerController : BaseApiController
         return this.mapper.Map<EmailTrainersDTO>(emailTrainer);
     }
 
+    [HttpGet("{idTrainer}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<EmailTrainersDTO>> Get(string idTrainer)
+    {
+        var emailTrainer = await unitOfWork.EmailsTrainers.GetByIdTrainerAsync(idTrainer);
+        if(emailTrainer == null){
+            return NotFound();
+        }
+        return this.mapper.Map<EmailTrainersDTO>(emailTrainer);
+    }
+
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

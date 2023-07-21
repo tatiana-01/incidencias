@@ -34,7 +34,9 @@ public class AreaRepository : IArea
 
     public async Task<IEnumerable<Area>>? GetAllAsync()
     {
-        return await _context.Set<Area>().ToListAsync();
+        return await _context.Set<Area>()
+        .Include(p=>p.salones)
+        .ToListAsync();
     }
 
     public async Task<Area>? GetByIdAsync(int id)

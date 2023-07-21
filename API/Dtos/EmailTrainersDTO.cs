@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dtos;
 
-    public class EmailTrainerDTO
+    public class EmailTrainersDTO
     {
         public string ? idTrainer {get;set;}
         public int idEmail {get;set;}

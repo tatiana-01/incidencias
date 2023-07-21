@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dtos;
 
-    public class TrainerDTO
+    public class TrainerPostDTO
     {
         public string ? id {get; set;}
         public string ? nombreCompleto {get; set;}

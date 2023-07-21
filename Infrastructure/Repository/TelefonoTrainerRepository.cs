@@ -38,9 +38,10 @@ public class TelefonoTrainerRepository : ITelefonoTrainer
         return await _context.Set<TelefonoTrainer>().ToListAsync();
     }
 
-    public async Task<TelefonoTrainer>? GetByIdAsync(int id)
+    public async Task<TelefonoTrainer>? GetByIdAsync(string idTrainer, int idTelefono)
     {
-        return await _context.Set<TelefonoTrainer>().FindAsync(id);
+        return await _context.TelefonosTrainers
+        .FirstOrDefaultAsync(p=>(p.idTrainer == idTrainer && p.idTelefono == idTelefono) );
     }
 
     public void Remove(TelefonoTrainer entity)

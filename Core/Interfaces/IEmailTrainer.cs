@@ -9,7 +9,7 @@ namespace Core.Interfaces;
 
     public interface IEmailTrainer
     {
-        Task<EmailTrainer> ? GetByIdAsync(int id);
+        Task<EmailTrainer> ? GetByIdAsync(string idTrainer, int idEmail);
         Task<IEnumerable<EmailTrainer>> ? GetAllAsync();
         IEnumerable<EmailTrainer> Find(Expression<Func<EmailTrainer,bool>> expression);
         void Add(EmailTrainer entity);

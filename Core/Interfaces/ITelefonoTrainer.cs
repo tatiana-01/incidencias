@@ -9,7 +9,7 @@ namespace Core.Interfaces;
 
     public interface ITelefonoTrainer
     {
-        Task<TelefonoTrainer> ? GetByIdAsync(int id);
+        Task<TelefonoTrainer> ? GetByIdAsync(string idTrainer, int idTelefono);
         Task<IEnumerable<TelefonoTrainer>> ? GetAllAsync();
         IEnumerable<TelefonoTrainer> Find(Expression<Func<TelefonoTrainer, bool>> expression);
         void Add(TelefonoTrainer entity);

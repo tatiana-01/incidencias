@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Dtos;
 
-    public class TipoIncidenciaDTO
+    public class TipoHardwarePostDTO
     {
-        public int id {get; set;}
-        public string ? NivelIncidencia {get; set;}
+        public string ? nombreHardware {get;set;}
     }

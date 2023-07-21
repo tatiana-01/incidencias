@@ -37,9 +37,10 @@ public class EmailTrainerRepository : IEmailTrainer
         return await _context.Set<EmailTrainer>().ToListAsync();
     }
 
-    public async Task<EmailTrainer>? GetByIdAsync(int id)
+    public async Task<EmailTrainer>? GetByIdAsync(string idTrainer, int idEmail)
     {
-        return await _context.Set<EmailTrainer>().FindAsync(id);
+        return await _context.EmailsTrainers
+        .FirstOrDefaultAsync(p=>(p.idTrainer == idTrainer && p.idEmail == idEmail) );
     }
 
     public void Remove(EmailTrainer entity)

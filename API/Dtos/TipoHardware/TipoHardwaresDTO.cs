@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace API.Dtos;
 
-    public class TipoSoftwareDTO
+    public class TipoHardwaresDTO
     {
-        public int id {get; set;}
-        public string ? nombreSoftware {get; set;}
+        public int id {get;set;}
+        public string ? nombreHardware {get;set;}
     }

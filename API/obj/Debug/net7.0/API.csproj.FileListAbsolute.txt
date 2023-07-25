@@ -96,3 +96,6 @@ C:/Users/Tatiana Paredes C/Desktop/campus/incidencias/API/bin/Debug/net7.0/AutoM
 C:/Users/Tatiana Paredes C/Desktop/campus/incidencias/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /home/apolm01-033/Desktop/incidencias/API/bin/Debug/net7.0/AutoMapper.dll
 /home/apolm01-033/Desktop/incidencias/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/apolm01-033/Desktop/incidencias/API/bin/Debug/net7.0/AspNetCoreRateLimit.dll
+/home/apolm01-033/Desktop/incidencias/API/bin/Debug/net7.0/Newtonsoft.Json.dll
+/home/apolm01-033/Desktop/incidencias/API/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.Versioning.dll

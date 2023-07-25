@@ -70,7 +70,6 @@ public class EmailController : BaseApiController
         unitOfWork.Emails.Update(email);
         await unitOfWork.SaveAsync();
         return this.mapper.Map<EmailsDTO>(email);
-
     }
 
     [HttpDelete("{id}")]

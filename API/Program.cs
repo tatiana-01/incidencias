@@ -2,8 +2,11 @@ using System.Reflection;
 using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using AspNetCoreRateLimit;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.ConfigureRateLimiting();
+builder.Services.ConfigureApiVersioning();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureCors();
 
@@ -50,6 +53,8 @@ using (var scope = app.Services.CreateScope())
 app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
+
+app.UseIpRateLimiting();
 
 app.UseAuthorization();
 

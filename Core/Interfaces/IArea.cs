@@ -7,6 +7,8 @@ namespace Core.Interfaces;
     {
         Task<Area> ? GetByIdAsync(int id);
         Task<IEnumerable<Area>> ? GetAllAsync();
+        Task<(int totalRegistros, IEnumerable<Area> registros)> ? GetAllAsync(int pageIndex, int pageSize, string search);
+        Task<IEnumerable<Area>> ? GetAllAsyncV11();
         IEnumerable<Area> Find(Expression<Func<Area,bool>> expression);
         void Add(Area entity);
         void AddRange(IEnumerable<Area> entities);

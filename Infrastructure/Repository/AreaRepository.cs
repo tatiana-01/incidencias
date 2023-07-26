@@ -35,6 +35,28 @@ public class AreaRepository : IArea
     public async Task<IEnumerable<Area>>? GetAllAsync()
     {
         return await _context.Set<Area>()
+        .ToListAsync();
+    }
+
+    public virtual async Task<(int totalRegistros, IEnumerable<Area> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.Areas as IQueryable<Area>;
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p=>p.nombreArea.ToLower().Contains(search));
+        }
+        var totalRegistros = await query.CountAsync();
+        var registros = await query
+            .Include(u=>u.salones)
+            .Skip((pageIndex-1)*pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+        return (totalRegistros, registros);
+    }
+
+    public async Task<IEnumerable<Area>>? GetAllAsyncV11()
+    {
+        return await _context.Set<Area>()
         .Include(p=>p.salones)
         .ToListAsync();
     }

@@ -1,4 +1,5 @@
 using API.Dtos;
+using API.Helpers;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -6,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 
 namespace API.Controllers;
-
+[ApiVersion("1.0")]
+[ApiVersion("1.1")]
 
 public class AreaController : BaseApiController
 {
@@ -20,17 +22,26 @@ public class AreaController : BaseApiController
     }
 
     [HttpGet]
-    [ApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<List<AreasDTO>> Get()
+    public async Task<ActionResult<Pager<AreasDTO>>> Get([FromQuery] Param areaParam)
     {
-        var areas = await unitOfWork.Areas.GetAllAsync();
-        return this.mapper.Map<List<AreasDTO>>(areas);
+        var areas = await unitOfWork.Areas.GetAllAsync(areaParam.PageIndex, areaParam.PageSize, areaParam.Search);
+        var lstAreasDto = mapper.Map<List<AreasDTO>>(areas.registros);
+        return new Pager<AreasDTO>(lstAreasDto, areas.totalRegistros, areaParam.PageIndex, areaParam.PageSize, areaParam.Search);
+    }
+
+    [HttpGet]
+    [MapToApiVersion("1.1")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<List<AreaDTO>> Get11()
+    {
+        var areas = await unitOfWork.Areas.GetAllAsyncV11();
+        return this.mapper.Map<List<AreaDTO>>(areas);
     }
 
     [HttpGet("{id}")]
-    [ApiVersion("1.1")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<AreaDTO>> Get(int id)

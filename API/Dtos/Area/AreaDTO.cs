@@ -13,3 +13,4 @@ namespace API.Dtos;
         public string ? descripcion {get;set;}
         public List<SalonesDTO> salones {get;set;}
     }
+    
